@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="E-book/src/main/java"/>
+	<classpathentry kind="lib" path="E-book/target/E-book-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="E-book/target/classes"/>
+</classpath>
