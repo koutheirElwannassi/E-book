@@ -23,7 +23,7 @@ import com.koutheir.spring.service.BookService;
  * @author koutheir
  * 
  */
-@CrossOrigin(origins = "*")
+@CrossOrigin("*")
 @RestController
 public class BookController {
 
@@ -31,6 +31,7 @@ public class BookController {
    private BookService bookService;
 
    /*---Add new book---*/
+   @CrossOrigin
    @PostMapping("/book")
    public ResponseEntity<?> save(@RequestBody Book book) {
 	  System.out.println("the json value of book is :::::: "+book);
@@ -39,6 +40,7 @@ public class BookController {
    }
    
    /*---Get a book by id---*/
+   @CrossOrigin
    @GetMapping("/book/{id}")
    public ResponseEntity<Book> get(@PathVariable("id") long id) {
       Book book = bookService.get(id);
@@ -46,6 +48,7 @@ public class BookController {
    }
 
    /*---get all books---*/
+   @CrossOrigin
    @GetMapping("/book")
    public ResponseEntity<List<Book>> list() {
       List<Book> books = bookService.list();
@@ -53,6 +56,7 @@ public class BookController {
    }
 
    /*---Update a book by id---*/
+   @CrossOrigin
    @PutMapping("/book/{id}")
    public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody Book book) {
       bookService.update(id, book);
@@ -60,6 +64,7 @@ public class BookController {
    }
 
    /*---Delete a book by id---*/
+   @CrossOrigin
    @DeleteMapping("/book/{id}")
    public ResponseEntity<?> delete(@PathVariable("id") long id) {
       bookService.delete(id);

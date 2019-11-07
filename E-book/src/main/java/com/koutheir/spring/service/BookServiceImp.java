@@ -21,7 +21,8 @@ import com.koutheir.spring.model.Book;
 public class BookServiceImp implements BookService {
 	@Autowired
 	private BookDao bookDao;
-
+	
+	@Transactional
 	@Override
 	public long save(Book book) {
 		// TODO Auto-generated method stub
